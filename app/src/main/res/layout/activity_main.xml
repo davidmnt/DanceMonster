@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagenFondo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/dance_monster_grande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaIzq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="37dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaArriba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="163dp" />
+
+    <ImageView
+        android:id="@+id/imagenPequeña"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/dance_monster_mini"
+        app:layout_constraintStart_toStartOf="@+id/guiaIzq"
+        app:layout_constraintTop_toTopOf="@+id/guiaArriba" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:text="Titulo"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/imagenPequeña"
+        app:layout_constraintTop_toTopOf="@+id/guiaArriba" />
+
+    <TextView
+        android:id="@+id/autor"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Autor: Netflix"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imagenPequeña"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+  <TextView
+      android:id="@+id/capitulo"
+      android:layout_width="180dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="15dp"
+      android:text="Capitulo: 1"
+      android:textSize="20dp"
+      android:textColor="@color/azul"
+      app:layout_constraintTop_toBottomOf="@id/autor"
+      app:layout_constraintStart_toEndOf="@id/imagenPequeña"/>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:text="Gnero: Talent Show"
+        android:textSize="20dp"
+        android:textColor="@color/naranja"
+        app:layout_constraintStart_toStartOf="@+id/capitulo"
+        app:layout_constraintTop_toBottomOf="@id/capitulo"/>
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Description: Bailarines aficionados disfrazados de avatares
+        CGI realizan sus mejores movimientos, con la esperanza de asombrar a un jurado y ganar 250.000 dolares"
+        android:textColor="@color/verde"
+        app:layout_constraintTop_toBottomOf="@id/imagenPequeña"
+        app:layout_constraintStart_toStartOf="@id/guiaIzq"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/btn_like"
+        app:layout_constraintTop_toBottomOf="@id/descripcion"
+        app:layout_constraintStart_toStartOf="@id/guiaIzq"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
