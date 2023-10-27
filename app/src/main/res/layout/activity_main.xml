@@ -29,6 +29,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="163dp" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaDrch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="371dp" />
+
     <ImageView
         android:id="@+id/imagenPequeña"
         android:layout_width="100dp"
@@ -85,18 +92,95 @@
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
-        android:text="Description: Bailarines aficionados disfrazados de avatares
-        CGI realizan sus mejores movimientos, con la esperanza de asombrar a un jurado y ganar 250.000 dolares"
+        android:text="Description: Bailarines aficionados disfrazados de avatares CGI realizan sus mejores movimientos, con la esperanza de asombrar a un jurado y ganar 250.000 dolares"
         android:textColor="@color/verde"
         app:layout_constraintTop_toBottomOf="@id/imagenPequeña"
         app:layout_constraintStart_toStartOf="@id/guiaIzq"/>
 
     <ImageView
+        android:id="@+id/like"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
         android:src="@drawable/btn_like"
         app:layout_constraintTop_toBottomOf="@id/descripcion"
         app:layout_constraintStart_toStartOf="@id/guiaIzq"/>
+
+    <ImageView
+        android:id="@+id/disLike"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/btn_dislike"
+        app:layout_constraintTop_toTopOf="@id/like"
+        app:layout_constraintStart_toEndOf="@id/like"
+        app:layout_constraintEnd_toStartOf="@id/favorito"/>
+
+    <ImageView
+        android:id="@+id/favorito"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/favoritos"
+        app:layout_constraintTop_toTopOf="@id/like"
+        app:layout_constraintEnd_toEndOf="@id/guiaDrch"/>
+
+    <TextView
+        android:id="@+id/contLike"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/like"
+        app:layout_constraintStart_toStartOf="@+id/like"/>
+
+    <TextView
+        android:id="@+id/contDisLike"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/disLike"
+        app:layout_constraintStart_toStartOf="@+id/disLike"/>
+
+    <TextView
+        android:id="@+id/contFavorite"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/favorito"
+        app:layout_constraintStart_toStartOf="@+id/favorito"/>
+
+    <Button
+        android:id="@+id/acti1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity 1"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guiaIzq"/>
+
+    <Button
+        android:id="@+id/acti2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity 2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/acti1"
+        app:layout_constraintEnd_toStartOf="@id/acti2"
+        />
+
+    <Button
+        android:id="@+id/acti3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity 2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guiaDrch"/>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
